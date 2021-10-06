@@ -26,7 +26,7 @@ while rtries>0:
         print("Your guess is too high! Try guessing lower")
         rtries-=1
     else:
-        print("I dont even know what you did but u messed it up!")
+        print("I dont even know what you did but u messed it up!")i
         rtries-=1
 
 if rtries==0:
