@@ -11,19 +11,19 @@ while rtries>0:
         elif rtries>3:
             print(f"Your guess is spot on! It took you {tries} tries. Congratulations!")
         else:
-            print(f"You almost lost but u still won in the end! it took you {tries}, Congratulations! ")
+            print(f"You almost lost but u still won in the end! it took you {tries} tries, Congratulations! ")
         break
-    elif number<randomint:
-        print("Your guess is too low! Try guessing higher")
-        rtries-=1
-    elif number>randomint:
-        print("Your guess is too high! Try guessing lower")
-        rtries-=1
     elif number>100:
         print("You need to guess 1-100 not higher than 100!")
         rtries-=1
     elif number<1:
         print("You need to guess 1-100 not any lower!")
+        rtries-=1
+    elif number<randomint:
+        print("Your guess is too low! Try guessing higher")
+        rtries-=1
+    elif number>randomint:
+        print("Your guess is too high! Try guessing lower")
         rtries-=1
     else:
         print("I dont even know what you did but u messed it up!")
