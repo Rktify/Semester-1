@@ -18,8 +18,8 @@ elif denom <= num:
     state = "improper fraction"
 
 #GCD
+gcd = math.gcd(num,denom)
 if state == "improper fraction":
-    gcd = math.gcd(num,denom)
     if gcd==1:
         if num > denom:
             x = num // denom
@@ -53,7 +53,6 @@ if state == "improper fraction":
         else:
             print(f"This {state} cannot be reduced any further")
 else:
-    gcd = math.gcd(num,denom)
     if gcd==1:
         print(f"This {state} cannot be reduced any further")
     else:
