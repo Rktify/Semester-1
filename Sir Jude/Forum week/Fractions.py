@@ -7,7 +7,7 @@ while num < 0:
 
 denom = int(input("Enter a denominator: Value must be greater than 0: "))
 while denom < 0:
-    denom = int(input("Please re-enter the numerator. Value must be greater than 0: "))
+    denom = int(input("Please re-enter the denominator. Value must be greater than 0: "))
 
 #PROPER / IMPROPER
 if denom > num:
