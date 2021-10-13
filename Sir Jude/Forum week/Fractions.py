@@ -55,6 +55,8 @@ if state == "improper fraction":
 else:
     gcd = math.gcd(num,denom)
     if gcd==1:
-        pass
+        print(f"This {state} cannot be reduced any further")
     else:
-        pass
+        numg = num // gcd
+        denomg = denom // gcd
+        print(f"This {state} can be reduced to {numg} / {denomg}")
