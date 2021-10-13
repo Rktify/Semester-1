@@ -19,13 +19,19 @@ elif denom <= num:
 
 #GCD
 gcd = math.gcd(num,denom)
-
 if gcd==1:
     if num > denom:
         x = num // denom
         y = num % denom
-        print(f"This {state} cannot be reduced any further")
-        print(f"The mixed number is {x} and {y} / {denom}")
+        if y == 0:
+            print(f"This {state} cannot be reduced any further")
+            print(f"The whole number is {x}")
+        else:
+            print(f"This {state} cannot be reduced any further")
+            print(f"The mixed number is {x} and {y} / {denom}")
+    elif num == denom:
+        print(f"This {state} can be reduced to 1 / 1")
+        print("The whole number is 1")
     else:
         print(f"This {state} cannot be reduced any further")
 else:
@@ -34,10 +40,14 @@ else:
     if numg > denomg:
         x = numg // denomg
         y = numg % denomg
-        print(f"This {state} can be reduced to {numg} / {denomg}")
-        print(f"The mixed number is {x} and {y} / {denomg}")
+        if y==0:
+            print(f"This {state} can be reduced to {numg} / {denomg}")
+            print(f"The whole number is {x}")
+        else:
+            print(f"This {state} can be reduced to {numg} / {denomg}")
+            print(f"The mixed number is {x} and {y} / {denomg}")
+    elif numg == denomg:
+        print(f"This {state} can be reduced to 1 / 1")
+        print("The whole number is 1")
     else:
         print(f"This {state} cannot be reduced any further")
-
-
-#WHOLE NUMBER
