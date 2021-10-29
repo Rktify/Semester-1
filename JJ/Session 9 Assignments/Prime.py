@@ -8,11 +8,11 @@ def primecheck(number):
         return True
 
 def emirpCheck(number):
+    global reverse
+    reverse = 0
     if not primecheck(number):
         return False
     else:
-        global reverse
-        reverse = 0
         while number != 0:
             sisa = number % 10
             reverse = reverse * 10 + sisa
@@ -20,11 +20,11 @@ def emirpCheck(number):
         return primecheck(reverse)
 
 number = int(input("Enter any number: "))
-if number == 11:
+
+a = emirpCheck(number)
+if number==reverse:
     print("False!")
+elif a == True:
+    print(number, reverse)
 else:
-    a = emirpCheck(number)
-    if a == True:
-        print(number, reverse)
-    else:
-        print("False!")
+    print("False!")
