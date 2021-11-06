@@ -1,4 +1,3 @@
-
 def delay(string,te):
     import time
     time.sleep(te)
