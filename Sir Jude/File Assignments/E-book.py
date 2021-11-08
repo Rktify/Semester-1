@@ -1,4 +1,5 @@
 import os
+
 def hapax(s):
     word = s.split()
     for i in word:
@@ -12,6 +13,11 @@ os.chdir("/Users/Wilbert")
 file = open("Book.txt", "r")
 
 s = file.read().lower()
+
+punc = '''!()-[]{};:'"\,<>./™?˜@#$â%^&*_”~€'''
+for element in s:
+    if element in punc:
+        s = s.replace(element, "")
 end = dict()
 end = hapax(s)
 
