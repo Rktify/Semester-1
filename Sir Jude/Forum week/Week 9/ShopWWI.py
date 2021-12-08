@@ -28,6 +28,8 @@ class ShopWWI: #Initializer
             self.__price = 3603.00
         elif self.__food == "Le Bonnotte Potatoes":
             self.__price = 270.81
+        else:
+            self.__price = 0
 
     def getPriceWWI(self): #Get the prices
         self.__PriceListWWI()
