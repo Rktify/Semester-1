@@ -1,5 +1,5 @@
-class ShopWWI: #Initializer
-    def __init__(self,food,amount):
+class ShopWWI:
+    def __init__(self,food,amount): #Initializer
         self.__food = food
         self.__amount = amount
         self.__price = self.getPriceWWI()
@@ -29,12 +29,12 @@ class ShopWWI: #Initializer
         elif self.__food == "Le Bonnotte Potatoes":
             self.__price = 270.81
         else:
-            self.__price = 0
+            self.__price = 0 #If the item mentioned is not in the list
 
     def getPriceWWI(self): #Get the prices
         self.__PriceListWWI()
         return self.__price
 
     def PriceCalcWWI(self): #To calculate the item price
-        self.__totalprice = self.__price * self.__amount
+        self.__totalprice = self.__price * self.__amount #Calculate the total price for each item
         return self.__totalprice
